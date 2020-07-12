@@ -69,7 +69,7 @@ namespace UnitTest.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Index));
             }
 
             var product = await _productRepository.GetByIdAsync((int)id);
